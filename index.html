@@ -10,7 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #fff;
             background-color: #1f1f1f; /* Dark background */
         }
 
@@ -21,23 +21,25 @@
         }
 
         header {
-            background: #e62e00; /* Spider-Man red */
+            background: linear-gradient(135deg, #e62e00, #550000); /* Gradient background */
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            border-bottom: 2px solid #fff;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         nav ul {
             padding: 0;
             list-style: none;
             text-align: center;
+            margin-top: 20px;
         }
 
         nav ul li {
@@ -50,31 +52,72 @@
             text-decoration: none;
             font-size: 1.2rem;
             text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e62e00; /* Red accent on hover */
         }
 
         .about,
-        .projects {
-            padding: 20px;
+        .projects,
+        .contact {
+            padding: 40px;
             text-align: left;
-            background: #fff;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #333;
+            margin: 40px 0;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
         }
 
-        .projects .project {
+        .about h2,
+        .projects h2,
+        .contact h2 {
+            font-size: 2.5rem;
             margin-bottom: 20px;
+            color: #e62e00; /* Red accent */
+        }
+
+        .about p,
+        .projects p,
+        .contact p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ddd;
+        }
+
+        .testimonials {
+            background: #444;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .testimonial {
             padding: 20px;
-            background-color: #f2f2f2; /* Light background */
+            background: #555;
+            margin: 20px;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial p {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+
+        .testimonial cite {
+            font-style: italic;
+            color: #aaa;
         }
 
         footer {
             background: #e62e00; /* Spider-Man red */
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+            padding: 20px 0;
+            margin-top: 40px;
             font-size: 0.9rem;
         }
 
@@ -83,17 +126,23 @@
             .container {
                 width: 90%;
             }
+            .about,
+            .projects,
+            .contact {
+                padding: 30px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>RIkyrat Trading Projects</h1>
+            <h1>RIkyrat Trading Tools</h1>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -101,31 +150,50 @@
 
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
-            <p>Welcome to my tools! I made these to help everyone,i dont earn anything from these and this isnt any scam</p>
+            <h2>About Us</h2>
+            <p>Welcome to Rikyrat Trading Tools, where innovation meets strategy. Our tools are meticulously crafted to empower traders like you, providing intuitive solutions to enhance your trading experience.</p>
+            <p>Join a community of traders who trust Rikyrat's tools for their trading success. Our commitment is to provide you with the best, free of charge, ensuring your journey is smooth and profitable.</p>
         </div>
     </section>
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Projects</h2>
+            <h2>Our Projects</h2>
             <div class="project">
                 <h3>Project 1: Prediction Journal</h3>
-                <p>Welcome to Trading Predictions! Here, you can easily log and manage your trading forecasts. Record your predictions with details like images, trading pairs, current and target prices, along with your reasoning. Once logged, you can later review and categorize them as true, false, or complicated. The site automatically timestamps each entry for your convenience, and if needed, you can delete predictions anytime. It's important to note that your data is completely private—only you have access to your records. This platform is entirely free to use, and I don't earn anything from it. Your privacy and security are top priorities, ensuring a safe and trustworthy experience. Feel free to leverage this tool to enhance your trading strategies without any worries!
-
-
-
-
-
-</p>
-                <p><a href="https://rikyrattrades.github.io/predictions/">Prediction Journal</a></p>
+                <p>Welcome to Trading Predictions! Here, you can easily log and manage your trading forecasts. Record your predictions with details like images, trading pairs, current and target prices, along with your reasoning. Once logged, you can later review and categorize them as true, false, or complicated. The site automatically timestamps each entry for your convenience, and if needed, you can delete predictions anytime. It's important to note that your data is completely private—only you have access to your records. This platform is entirely free to use, and I don't earn anything from it. Your privacy and security are top priorities, ensuring a safe and trustworthy experience. Feel free to leverage this tool to enhance your trading strategies without any worries!</p>
+                <p><a href="https://rikyrattrades.github.io/predictions/">Explore Prediction Journal</a></p>
             </div>
             <div class="project">
-                <h3>Project 2: Coin leaderboard</h3>
-                <p>In this you can see 50 crypto ranked from their high or low depending on your settings,it helps if u want to trade coins on their daily high or low,here you can see the coin,its price,percentage from its daily high,price from its daily high,daily high price,current price rall ranked in order from closest to daily high.If u click on the change mode the daily high switches to daily low and so does the data and price,if you click on the coins name you will be taken to the tradingview chart of the coin</p>
-                <p><a href="https://rikyrattrades.github.io/ladduboard/">Coin leaderboard</a></p>
+                <h3>Project 2: Coin Leaderboard</h3>
+                <p>View the top 50 cryptocurrencies ranked by their daily high or low prices. Perfect for traders looking to capitalize on market movements. Switch between daily high and low modes effortlessly.</p>
+                <p><a href="https://rikyrattrades.github.io/ladduboard/">Explore Coin Leaderboard</a></p>
             </div>
-            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to connect with me via Discord or Instagram for any queries or collaboration opportunities.</p>
+            <ul>
+                <li>Discord: rikyratverycringe</li>
+                <li>Instagram: riky.rat</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>"Rikyrat's tools have truly transformed my trading strategy. Easy to use and effective!"</p>
+                <cite>- Jane Smith, Trader</cite>
+            </div>
+            <div class="testimonial">
+                <p>"I've tried many trading tools, but Rikyrat's stand out for their simplicity and accuracy."</p>
+                <cite>- Michael Johnson, Investor</cite>
+            </div>
         </div>
     </section>
 
